@@ -1,0 +1,13 @@
+<h3>{{welcome}}</h3>
+<h3>第一种模板语法</h3>
+<ul>
+    <template ngFor let-item [ngForOf]="items">
+        <li>{{item}}</li>
+    </template>
+</ul>
+<h3>第二种模板语法（语法糖而已）</h3>
+<ul>
+	<li *ngFor="let item of items">{{item}}</li>
+</ul>
+<input type="text" #newItemName>
+<button on-click="addItem(newItemName.value)" newItemName.value=''>增加商品</button>
